@@ -36,28 +36,4 @@ CRM
   </div>
   <div style="text-align:center;color:#9ca3af;font-size:14px;line-height:1.2;">▼</div>
 
-  <div style="border:2px dashed #d97706;border-radius:12px;padding:12px;margin:6px 0;background:#fffaf0;">
-    <div style="font-size:13px;font-weight:700;color:#d97706;margin-bottom:10px;">云端侧 · 复杂调度借云力</div>
-    <div style="display:flex;justify-content:center;">
-      <div style="flex:1;max-width:320px;background:#fff;border-left:5px solid #d97706;border-radius:8px;padding:10px 12px;">
-        <div style="font-size:14px;font-weight:700;color:#d97706;">路径规划 Agent（调度Agent）</div>
-        <div style="font-size:12px;color:#9ca3af;margin:2px 0 4px;">云端大模型 · 核心②</div>
-        <div style="font-size:13px;color:#374151;">算最优线路、成本与报价；与本地财务 Agent 实时协同</div>
-      </div>
-    </div>
-  </div>
-  <div style="text-align:center;color:#9ca3af;font-size:14px;line-height:1.2;">▼</div>
 
-  <div style="display:flex;justify-content:center;margin:6px 0;">
-    <div style="max-width:430px;background:#fff;border:2px solid #c0392b;border-radius:10px;padding:10px 16px;">
-      <div style="font-size:14px;font-weight:700;color:#c0392b;">风控审计 Agent（核心③）</div>
-      <div style="font-size:13px;color:#374151;margin-top:4px;">Maker-Checker 博弈：给方案挑成本/安全毛病，多轮对齐后再下发</div>
-    </div>
-  </div>
-  <div style="text-align:center;color:#9ca3af;font-size:14px;line-height:1.2;">▼</div>
-
-  <div style="display:flex;justify-content:center;">
-    <div style="background:#059669;color:#fff;padding:8px 20px;border-radius:10px;font-size:14px;font-weight:600;">📄 输出：电子工单 + 自动记账 + AI 回拨确认</div>
-  </div>
-</div>
-</html>
