@@ -4,32 +4,7 @@ CRM
 ```
 
 
-        </div>
-        <el-button type="primary"
-          text
-          @click="toggleExpand"
-          class="toggle-button">
-          <span class="toggle-text">{{ expanded ? '收起' : '展开' }}</span>
-          <el-icon class="toggle-icon"
-            :class="{ 'rotate': expanded }">
-            <ArrowDown />
-          </el-icon>
-        </el-button>
-        <div class="flex-1 flex justify-end">
-          <el-button @click="resetQuery">重置</el-button>
-          <el-button type="primary"
-            @click="query">查询</el-button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</template>
-
-<script setup>
-import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue'
-import { ArrowDown } from '@element-plus/icons-vue'
-
+        
 // 定义组件的props
 const props = defineProps({
   // 要显示的数据项数组
