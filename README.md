@@ -4,60 +4,6 @@ CRM
 ```
 
 
-        
-// 定义组件的props
-const props = defineProps({
-  // 要显示的数据项数组
-  items: {
-    type: Array,
-    required: true,
-    default: () => []
-  },
-  // 网格列数配置，响应式断点
-  columns: {
-    type: Object,
-    default: () => ({
-      xs: 1,  // 超小屏幕 (手机)
-      sm: 1,  // 小屏幕 (平板)
-      md: 2,  // 中等屏幕 (小笔记本)
-      lg: 3,  // 大屏幕 (桌面)
-      xl: 3   // 超大屏幕
-    })
-  },
-  // 最大显示行数，超过此行数将隐藏并显示展开按钮
-  maxRows: {
-    type: Number,
-    default: 1
-  },
-  // 行高（像素）
-  rowHeight: {
-    type: Number,
-    default: 40
-  }
-})
-
-const emit = defineEmits(['resetQuery', 'query'])
-
-// 重置查询
-const resetQuery = () => {
-  emit('resetQuery')
-}
-// 查询数据
-const query = () => {
-  emit('query')
-}
-
-// 获取过滤之后的items，过滤空数据
-const filteredItems = computed(() => {
-  return props.items.filter(item => {
-    // 过滤掉null、undefined、空字符串、空对象、空数组等无效数据
-    if (item === null || item === undefined) return false
-    if (typeof item === 'string' && item.trim() === '') return false
-    if (typeof item === 'object' && Array.isArray(item) && item.length === 0) return false
-    if (typeof item === 'object' && !Array.isArray(item) && Object.keys(item).length === 0) return false
-    return true
-  })
-})
 
 
 // 响应式状态
