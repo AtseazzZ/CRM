@@ -2,7 +2,16 @@
 CRM
 ### tih
 ```
+// 响应式状态
+const gridContainer = ref(null) // 网格容器引用
+const expanded = ref(false) // 是否展开状态
+const rowCount = ref(0) // 实际行数
+const itemsPerRow = ref(3) // 每行项目数，默认为3，将根据屏幕尺寸动态调整
 
+// 计算是否显示切换按钮
+const showToggleButton = computed(() => {
+  return rowCount.value > props.maxRows
+})
 
 
 
