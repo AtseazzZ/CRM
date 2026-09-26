@@ -39,44 +39,6 @@ const calculateLayout = async () => {
   await nextTick()
   if (!gridContainer.value) return
 
-  // 获取容器宽度
-  const containerWidth = gridContainer.value.clientWidth
-
-  // 根据容器宽度确定列数
-  if (containerWidth < 576) {
-    // xs: 手机屏幕
-    itemsPerRow.value = props.columns.xs
-  } else if (containerWidth < 768) {
-    // sm: 平板屏幕
-    itemsPerRow.value = props.columns.sm
-  } else if (containerWidth < 992) {
-    // md: 小型笔记本
-    itemsPerRow.value = props.columns.md
-  } else if (containerWidth < 1200) {
-    // lg: 桌面显示器
-    itemsPerRow.value = props.columns.lg
-  } else {
-    // xl: 大型显示器
-    itemsPerRow.value = props.columns.xl
-  }
-
-  // 计算总行数（基于过滤后的数据）
-  rowCount.value = Math.ceil(filteredItems.value.length / itemsPerRow.value)
-}
-
-// 监听过滤后的items变化，重新计算布局
-watch(filteredItems, () => {
-  calculateLayout()
-}, { deep: true })
-
-// 组件挂载后计算布局
-onMounted(() => {
-  calculateLayout()
-
-  // 添加窗口大小变化监听器
-  window.addEventListener('resize', calculateLayout)
-})
-
 // 在组件卸载前移除事件监听器
 onUnmounted(() => {
   window.removeEventListener('resize', calculateLayout)
