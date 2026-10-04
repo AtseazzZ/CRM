@@ -3,12 +3,6 @@ CRM
 ### tih
 ```
 
-# 配置好同级文件夹下.env中的大模型API
-from hello_agents import SimpleAgent, HelloAgentsLLM, ToolRegistry
-from hello_agents.tools import MemoryTool, RAGTool
-
-# 创建LLM实例
-llm = HelloAgentsLLM()
 
 # 创建工具注册表
 tool_registry = ToolRegistry()
