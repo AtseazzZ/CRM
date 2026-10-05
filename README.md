@@ -26,11 +26,7 @@ const calculateLayout = async () => {
 onUnmounted(() => {
   window.removeEventListener('resize', calculateLayout)
 })
-
-// 暴露组件内部的状态和方法，供父组件使用
-defineExpose({
-  // 当前每行的项目数
-  getCurrentItemsPerRow: () => itemsPerRow.value,
+: () => itemsPerRow.value,
   // 当前的行数
   getCurrentRowCount: () => rowCount.value,
   // 是否展开状态
