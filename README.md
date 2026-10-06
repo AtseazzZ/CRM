@@ -13,8 +13,6 @@ tool_registry = ToolRegistry()
 )
 
 # 开始对话
-response = agent.run("你好！请记住我叫张三，我是一名Python开发者")
-print(response)
 
 
 // 计算实际行数和每行项目数
